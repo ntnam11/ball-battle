@@ -56,3 +56,35 @@ The whole process (from exporting to installing) costs ~ 15 mins total (u can sa
 - Some extensive AR functions. i.e. using two fingers to scale the field, swipe to rotate it, etc.
 - Better character animation
 - Code cleaning & optimizing
+
+### About the maze
+I came up with an algorithm to create the maze.
+Let the field be an array of m (rows) x n (cols).
+
+Move randomly between cells and call that *1st-path*. Mark visited cells. If we can't move further, go back and continue with *2nd-path*, etc. Save visited cells into orders. The array after finishing traversal is something like
+
+```python
+# Incomplete. All zeroes should be filled
+[0, 0, 1, 2, 2]
+[0, 1, 1, 2, 0]
+[0, 1, 2, 2, 0]
+[1, 1, 2, 0, 0]
+[1, 1, 1, 1, 0]
+[1, 1, 1, 1, 0]
+[0, 0, 0, 0, 0]
+[0, 0, 0, 0, 0]
+[0, 0, 0, 0, 0]
+[0, 0, 0, 0, 0]
+```
+
+And the *paths* are something like (describe in python dict)
+
+```python
+{
+    1: [(2, 0), (2, 1), (2, 2), ..., (2, 4), (1, 4)],
+    2: [(2, 3), (2, 2), ...],
+    ...
+}
+```
+
+After that, we will create walls base on those.

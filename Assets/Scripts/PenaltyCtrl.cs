@@ -4,20 +4,26 @@ using UnityEngine;
 
 public class PenaltyCtrl : MonoBehaviour
 {
-    // Start is called before the first frame update
+    GameObject wallPrefab;
+    GameObject playerSoldier;
+    GameObject ballObj;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        // needs a separated input control here
     }
 
     void CreateMaze()
     {
-
+        // Recursion goes here
+        // I almost finished it in Python and was about to convert it to C#
+        // *sad noises*
+        // In short, dfs for a random path and then convert that path to
+        // connected walls
     }
 }
