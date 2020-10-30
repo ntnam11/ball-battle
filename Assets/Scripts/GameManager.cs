@@ -149,14 +149,15 @@ public class GameManager : MonoBehaviour
         currentPlayerEnergy = 0;
         FillEnergy(enemyEnergy, 0);
         FillEnergy(playerEnergy, 0);
+
+        // Determines whether player/enemy is Attacker/Defender
+        enemy = Params.GetPlayerParams(false);
+        player = Params.GetPlayerParams(true);
     }
 
     public void MatchStart()
     {
-        // Determines whether player/enemy is Attacker/Defender
         // Set the field on which can be put Soldiers
-        enemy = Params.GetPlayerParams(false);
-        player = Params.GetPlayerParams(true);
         string tag = "PlayerField";
         if (!player.isAtk)
         {

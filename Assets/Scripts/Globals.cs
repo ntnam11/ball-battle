@@ -28,6 +28,7 @@ public class Globals : ScriptableObject
             Debug.Log("Set BGM: false");
             return "BGM: No";
         }
+        // TODO: Add bgm file ctrl
     }
 
     public string ToggleSound()
@@ -44,5 +45,11 @@ public class Globals : ScriptableObject
             Debug.Log("Set Sound: false");
             return "Sound: No";
         }
+        // TODO: Add sound file ctrl
     }
+
+#if UNITY_STANDALONE_WIN
+    // need to rotate the field, UI, etc.
+    // the default resolution should be 576x1024
+#endif
 }
