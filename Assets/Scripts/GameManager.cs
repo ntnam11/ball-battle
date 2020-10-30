@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
         {
-            OnscreenDebugOutput.Log($"Touch at {pos}, hit {hit.transform.tag} at {hit.point}");
+            //OnscreenDebugOutput.Log($"Touch at {pos}, hit {hit.transform.tag} at {hit.point}");
             if (hit.transform.tag == "PlayerField")
             {
                 if (currentPlayerEnergy > player.energyCost)
@@ -72,7 +72,7 @@ public class GameManager : MonoBehaviour
                         s.Soldier.SetAttr(true);
                         s.Soldier.GameManager = this;
                         AtkSoldiers.Add(s);
-                        OnscreenDebugOutput.Log($"Added {s} at {hit.point}");
+                        //OnscreenDebugOutput.Log($"Added {s} at {hit.point}");
                     }
                     else
                     {
@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour
                         s.Soldier.SetAttr(true);
                         s.Soldier.GameManager = this;
                         DefSoldiers.Add(s);
-                        OnscreenDebugOutput.Log($"Added {s} at {hit.point}");
+                        //OnscreenDebugOutput.Log($"Added {s} at {hit.point}");
                     }
                 }
             }

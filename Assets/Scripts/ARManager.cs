@@ -76,7 +76,7 @@ public class ARManager : MonoBehaviour
     public void ARScaleField()
     {
         aRRoot.transform.localScale = originalScale * fieldScale.value;
-        OnscreenDebugOutput.Log($"Scale value changed: {fieldScale.value}");
+        //OnscreenDebugOutput.Log($"Scale value changed: {fieldScale.value}");
     }
 
     public void ARAltitudeField()
@@ -84,7 +84,7 @@ public class ARManager : MonoBehaviour
         // In case player wants the field to
         // *floats* in the air
         altitudeVec = new Vector3(0, 1, 0) * fieldAltitude.value;
-        OnscreenDebugOutput.Log($"Altitude value changed: {fieldAltitude.value}");
+        //OnscreenDebugOutput.Log($"Altitude value changed: {fieldAltitude.value}");
     }
 
     public void ARReset()
