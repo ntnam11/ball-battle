@@ -258,6 +258,9 @@ public class GameUICtrl : MonoBehaviour
 
     public void ExitMatch()
     {
+        GameManager.matchOrd = 0;
+        GameManager.playerPoint = 0;
+        GameManager.enemyPoint = 0;
         SceneManager.LoadScene("MenuScene");
     }
 

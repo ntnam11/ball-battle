@@ -76,6 +76,7 @@ public class MainMenu : MonoBehaviour
         else
         {
             aRSession.enabled = true;
+            Globals.supportsAR = true;
         }
     }
 }
