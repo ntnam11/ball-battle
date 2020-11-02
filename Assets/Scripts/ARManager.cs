@@ -27,6 +27,11 @@ public class ARManager : MonoBehaviour
     Vector3 altitudeVec;
     Vector3 originalScale;
 
+    // This asks for Camera permission right from the MenuScene.
+    // I wanna find a way to only ask for perms in the ARScene,
+    // not from the Menu (the *Play AR* button should only be shown
+    // if AR is supported), but haven't figured it out yet. Sad
+
     void Start()
     {
         Globals.usingAR = true;

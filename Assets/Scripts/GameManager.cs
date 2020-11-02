@@ -169,6 +169,9 @@ public class GameManager : MonoBehaviour
         // i.e: The ball is too close to the walls or Atker's gate
         // But it's okay if the ball is spawned at the center of the field
         // (or z == 0)
+        // Update: I wonder why this sometimes makes the ball created outside
+        // the field in AR (but it doesn't affect the gameplay, maybe
+        // it's only occurs on my device? Anyway that shouldn't happen ._.
         GameObject field = GameObject.FindGameObjectWithTag(tag);
         Vector3[] vertices = field.GetComponent<MeshFilter>().mesh.vertices;
         Vector3 topLeft = field.transform.TransformPoint(vertices[0]);
